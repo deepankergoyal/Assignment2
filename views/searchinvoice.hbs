@@ -1,0 +1,22 @@
+<h2>Search by Invoice No.</h2>
+
+<form action="/search/invoiceNo" method="post">
+  <label for="invoiceNo">Invoice No.:</label>
+  <input type="text" id="invoiceNo" name="invoiceNo" required />
+  <button type="submit">Search</button>
+</form>
+
+{{#if matchingCars}}
+  <h3>Matching Cars:</h3>
+  <div class="card-container">
+    {{#each matchingCars}}
+      <div>
+        <img src="{{Image}}" alt="{{Name}}" />
+        <h4>Invoice No: {{InvoiceNo}}</h4>
+        <p>Name: {{Name}}</p>
+      </div>
+    {{/each}}
+  </div>
+{{else}}
+  <p>No matching cars found.</p>
+{{/if}}

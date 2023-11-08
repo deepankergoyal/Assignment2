@@ -1,0 +1,23 @@
+<h2>Search by Manufacturer</h2>
+
+<form action="/search/Manufacturer" method="post">
+  <label for="Manufacturer">Manufacturer:</label>
+  <input type="text" id="Manufacturer" name="Manufacturer" required />
+  <button type="submit">Search</button>
+</form>
+
+{{#if matchingCars.length}}
+  <h3>Matching Cars:</h3>
+  <ul>
+    {{#each matchingCars}}
+      <li>
+        InvoiceNo:
+        {{InvoiceNo}}, Manufacturer:
+        {{Manufacturer}}, Model:
+        {{Model}}
+      </li>
+    {{/each}}
+  </ul>
+{{else}}
+  <p>No matching cars found.</p>
+{{/if}}
