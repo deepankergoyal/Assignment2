@@ -1,7 +1,7 @@
 const fs = require("fs");
 
 const jsonData = JSON.parse(
-  fs.readFileSync(`${__dirname}/./../ite5315-A1-Car_sales.json`) // using new file for searching invoice
+  fs.readFileSync(`${__dirname}/./../SuperSales.json`) // using new file for searching invoice
 );
 
 exports.f1 = (req, res) => {
